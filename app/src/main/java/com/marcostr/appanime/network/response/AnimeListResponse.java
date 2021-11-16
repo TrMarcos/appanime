@@ -27,8 +27,8 @@ public class AnimeListResponse {
             item.setCreatedAt(itemResponse.getAttributes().getCreatedAt());
             item.setDescription(itemResponse.getAttributes().getDescription());
             item.setYoutubeVideoId(itemResponse.getAttributes().getYoutubeVideoId());
-            if(itemResponse.getAttributes().getCoverImage() != null) {
-                item.setImage(itemResponse.getAttributes().getCoverImage().getOriginal());
+            if(itemResponse.getAttributes().getPosterImage() != null) {
+                item.setImage(itemResponse.getAttributes().getPosterImage().getOriginal());
             }
 
                 result.add(item);

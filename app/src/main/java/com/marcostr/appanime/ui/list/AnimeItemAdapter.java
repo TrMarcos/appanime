@@ -11,6 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
 import com.marcostr.appanime.R;
 import com.marcostr.appanime.model.Anime;
@@ -61,10 +64,16 @@ public class AnimeItemAdapter extends RecyclerView.Adapter<AnimeItemAdapter.Anim
                 clickListener.onMovieClick(animeList    .get(position));
             }
         });
+
+        RequestOptions requestOptions = new RequestOptions();
         Glide.with(context)
                 .load(this.animeList.get(position).getImage())
-                .apply(RequestOptions.centerCropTransform())
+                .apply(requestOptions.centerCropTransform())
+                .apply(requestOptions.bitmapTransform(new RoundedCorners(10)))
                 .into(holder.imageViewAnime);
+
+
+
     }
 
     @Override

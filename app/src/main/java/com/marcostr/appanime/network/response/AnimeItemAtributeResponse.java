@@ -10,7 +10,7 @@ public class AnimeItemAtributeResponse {
 
     private String youtubeVideoId;
 
-    private AnimeItemAtributeCoverImage coverImage;
+    private AnimeItemAtributeCoverImage posterImage;
 
     public String getCreatedAt() {
         return createdAt;
@@ -44,11 +44,11 @@ public class AnimeItemAtributeResponse {
         this.youtubeVideoId = youtubeVideoId;
     }
 
-    public AnimeItemAtributeCoverImage getCoverImage() {
-        return coverImage;
+    public AnimeItemAtributeCoverImage getPosterImage() {
+        return posterImage;
     }
 
-    public void setCoverImage(AnimeItemAtributeCoverImage coverImage) {
-        this.coverImage = coverImage;
+    public void setPosterImage(AnimeItemAtributeCoverImage posterImage) {
+        this.posterImage = posterImage;
     }
 }
